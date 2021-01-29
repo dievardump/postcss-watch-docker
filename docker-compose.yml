@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  postcss:
+    container_name: postcss
+    image: "node:lts"
+    volumes:
+      - .:/home/node/app
+    command: "npm run dev"
+    user: "node"
+    working_dir: /home/node/app
